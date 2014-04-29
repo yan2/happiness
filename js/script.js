@@ -234,7 +234,7 @@ texts = [
   }, {
     key: "Academics",
     file: "academics.csv",
-    name: "Aesop's Fables"
+    name: "Academics"
   }, {
     key: "Happiness",
     file: "happiness.csv",
