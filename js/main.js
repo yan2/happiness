@@ -68,20 +68,33 @@ function getCorrelation(xArray, yArray) {
 d3.csv('data/CSDATA_ALLDATA.csv', function(data) {
 
   var xAxis = 'Likes', yAxis = 'Happiness';
-  var xAxisOptions = ["Likes", "Academics", "Campus Dining", "Sunshine", "Computers", "Diversity", "Drug Safety", "Facilities", "Girls", "Greek Life"]
+  var xAxisOptions = ["Sunshine", "Academics", "Happiness", "Athletics", "Atmosphere", "Computers", "Dining", "Diversity", "Facilities", "Girls", "Greek", "Guys", "Health", "Housing", "Likes", "Nightlife", "Off Campus Dining", "Off Campus Housing", "Parking", "Safety", "Strictness", "Transportation", "Twitter", "Weather"]
   // var yAxisOptions = ["Well-being"];
   var descriptions = {
-    "Likes" : "facebook likes",
-    "Academics" : "Academics",
-    "Campus Dining" : "Campus Dining" , 
     "Sunshine" : "Sunshine", 
+    
+    "Academics" : "Academics",
+    "Happiness" : "Happiness" , 
+    "Athletics" : "Athletics", 
+    "Atmosphere" : "Atmosphere", 
     "Computers" : "Computers", 
+    "Dining" : "Dining", 
     "Diversity" : "Diversity", 
-    "Drug Safety" : "Drug Safety", 
     "Facilities" : "Facilities", 
-    "Girls" : "Girls", 
-    "Greek Life" : "Greek Life"
-
+    "Girls" : "Girls",
+    "Greek" : "Greek Life",
+    "Guys" : "Guys" , 
+    "Housing" : "Housing", 
+    "Likes" : "Likes", 
+    "Nightlife" : "Nightlife", 
+    "Off Campus Dining" : "Off Campus Dining", 
+    "Off Campus Housing" : "Off Campus Housing", 
+    "Parking" : "Parking", 
+    "Safety" : "Safety", 
+    "Strictness" : "Strictness", 
+    "Transportation" : "Transportation", 
+    "Twitter" : "Twitter", 
+    "Weather" : "Weather"
   };
 
   var keys = _.keys(data[0]);
