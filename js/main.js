@@ -170,9 +170,9 @@ d3.csv('data/CSDATA_ALLDATA.csv', function(data) {
     .attr('fill', function(d, i) {return pointColour(i);})
     .style('cursor', 'pointer')
     .on('mouseover', function(d) {
-      console.log(d.Name)
+      console.log(d.name)
       d3.select('svg g.chart #collegeLabel')
-        .text(d)
+        .text(d.name)
         .transition()
         .style('opacity', 1);
     })
