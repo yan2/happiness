@@ -71,29 +71,28 @@ d3.csv('data/CSDATA_ALLDATA.csv', function(data) {
   var xAxisOptions = ["Sunshine", "Academics", "Happiness", "Athletics", "Atmosphere", "Computers", "Dining", "Diversity", "Facilities", "Girls", "Greek", "Guys", "Health", "Housing", "Likes", "Nightlife", "Off Campus Dining", "Off Campus Housing", "Parking", "Safety", "Strictness", "Transportation", "Twitter", "Weather"]
   // var yAxisOptions = ["Well-being"];
   var descriptions = {
-    "Sunshine" : "Sunshine", 
-    
+    "Sunshine" : "Hours of Sunshine per Year", 
     "Academics" : "Academics",
     "Happiness" : "Happiness" , 
     "Athletics" : "Athletics", 
-    "Atmosphere" : "Atmosphere", 
+    "Atmosphere" : "Local Atmosphere", 
     "Computers" : "Computers", 
-    "Dining" : "Dining", 
-    "Diversity" : "Diversity", 
+    "Dining" : "On Campus Dining", 
+    "Diversity" : "Campus Diversity", 
     "Facilities" : "Facilities", 
     "Girls" : "Girls",
     "Greek" : "Greek Life",
     "Guys" : "Guys" , 
     "Housing" : "Housing", 
-    "Likes" : "Likes", 
+    "Likes" : "Number of Facebook Likes", 
     "Nightlife" : "Nightlife", 
     "Off Campus Dining" : "Off Campus Dining", 
     "Off Campus Housing" : "Off Campus Housing", 
     "Parking" : "Parking", 
     "Safety" : "Safety", 
-    "Strictness" : "Strictness", 
+    "Strictness" : "Campus Strictness", 
     "Transportation" : "Transportation", 
-    "Twitter" : "Twitter", 
+    "Twitter" : "Twitter Activity", 
     "Weather" : "Weather"
   };
 
@@ -105,12 +104,12 @@ d3.csv('data/CSDATA_ALLDATA.csv', function(data) {
   var svg = d3.select("#chart")
     .append("svg")
     .attr("width", 1000)
-    .attr("height", 640);
+    .attr("height", 800);
   var xScale, yScale;
 
   svg.append('g')
     .classed('chart', true)
-    .attr('transform', 'translate(80, -60)');
+    .attr('transform', 'translate(100, -20)');
 
   // Build menus
   d3.select('#x-axis-menu')
@@ -146,8 +145,8 @@ d3.csv('data/CSDATA_ALLDATA.csv', function(data) {
   // University name
   d3.select('svg g.chart')
     .append('text')
-    .attr({'id': 'collegeLabel', 'x': 0, 'y': 170})
-    .style({'font-size': '40px', 'font-weight': 'bold', 'fill': '#222'});
+    .attr({'id': 'collegeLabel', 'x': 0, 'y': 70})
+    .style({'font-size': '40px', 'font-weight': 'bold', 'fill': '#3B8CA8'});
 
   // Best fit line (to appear behind points)
   d3.select('svg g.chart')
